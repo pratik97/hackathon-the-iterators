@@ -4,28 +4,30 @@
 
         error_reporting(E_ALL ^ E_DEPRECATED);
 
-        $host = 'localhost';
-        $user = 'root';
-        $pass = '';
+        $host = 'http://sjksd.000webhostapp.com';
+        $user = 'smit';
+        $pass = 'smit123';
 
-         mysql_connect($host, $user, $pass);
+$con = mysqli_connect("sjksd.000webhostapp.com","smit","smit123","complaint");
 
-          mysql_select_db('modu1');
+
+
+          mysqli_select_db($con,'id810194_complaint');
 
         $email = $_GET['emailid']; 
 
         $data = "";
 
 
-       $sql = "select * from register where emailid = '$email'";
+       $sql = "select * from random where emailid = '$email'";
 
-       $resu = mysql_query($sql);
+       $resu = mysqli_query($con,$sql);
        
        $count = 0;
 
-       while($temp = mysql_fetch_assoc($resu))
+       while($temp = mysqli_fetch_assoc($resu))
        {
-            $count ++;
+            $count++;
 
         }
 
@@ -38,4 +40,5 @@
           $data = "you can register";
        }
          echo $data;
+         mysqli_close($con);
 ?>

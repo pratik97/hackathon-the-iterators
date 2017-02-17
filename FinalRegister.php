@@ -22,19 +22,19 @@
         $veri_code = $_POST["code"];
         
         $host = 'localhost';
-        $user = 'root';
-        $pass = '';
+        $user = 'id810194_smit';
+        $pass = 'smit123';
 
-         mysql_connect($host, $user, $pass);
+         $con=mysqli_connect($host, $user, $pass);
 
-          mysql_select_db('modu1');
+          mysqli_select_db($con,'id810194_complaint');
 
 
          $retval = "select * from random where ran_num = $veri_code";
 
-          $res = mysql_query($retval);
+          $res = mysqli_query($con,$retval);
    
-         while($temp=mysql_fetch_assoc($res))
+         while($temp=mysqli_fetch_assoc($res))
                 { 
 			
                     		$e = $temp['emailid'];
@@ -49,7 +49,7 @@
          if($v == $veri_code and $e == $email)
           {
               $sql2 = "insert into register value (NULL,'$email','$pass')";
-              mysql_query($sql2);
+              mysqli_query($con,$sql2);
              
              include ('welcome.php');
           }
@@ -57,8 +57,8 @@
           {
              echo "You have entered something wrong";
            }
-
+        mysqli_close($con);
       ?>
       
    </body>
-</html>						
+</html>
