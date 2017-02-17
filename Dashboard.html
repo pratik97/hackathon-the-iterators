@@ -1,13 +1,197 @@
 <html>
     <head>
-        <title>#SomeName</title>
+        <title>Complaint Management System</title>
+        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <style>
+            #navbar {
+                background: #4CAF50;
+            }
+            
+            .active {
+                background: #2E7D32;
+            }
+            
+            .navbar-default .navbar-nav>li>a {
+                color: #ffffff;
+            }
+            
+            .navbar>.container-fluid .navbar-brand {
+                color: #ffffff;
+            }
+            
+            ul a, div a {
+                color: #ffffff;
+                font-family: Raleway;
+                font-size: +16px;
+            }
+            
+            @font-face {
+                font-family: "Raleway";
+                src: url(bootstrap/fonts/Raleway.ttf);
+            }
+            
+            #slideshow {
+                height: 95%;
+                margin-top: -20px;
+            }
+            
+            .slides {
+                display: none;
+            }
+            
+            .slides img {
+                width: 100%;
+                margin-left: -15px;
+                position: absolute;
+                opacity: 0.7;
+            }
+            
+            .slides .text {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-left: -15px;
+                font-size: +50px;
+                background: #f44336;
+                font-family: Raleway;
+                color:  #ffffff;
+                position: absolute;
+            }
+            
+            #next {
+                background: #757575;
+                height: 600px;
+                transition: 0.3s;
+            }
+            
+            #prev {
+                background: #757575;
+                height: 600px;
+                transition: 0.3s;
+            }
+            
+            #next:hover {
+                background: #E0E0E0;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            
+            #prev:hover {
+                background: #E0E0E0;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            
+            #next img {
+                width: 60px;
+                height: 60px;
+                margin-left: 65px;
+                margin-right: 65px;
+                margin-top: 260px;
+            }
+            
+            #prev img {
+                width: 60px;
+                height: 60px;
+                margin-left: 65px;
+                margin-right: 65px;
+                transform: rotateZ(180deg);
+                margin-top: 260px;
+            }
+            
+            #card-1, #card-2, #card-3 {
+                background: #E0E0E0;
+                margin-top: 40px;
+                margin-left: 90px;
+                padding-top: 50px;
+                height: 300px;
+                transition: 0.3s;
+            }
+            
+            .minimal-img-1 {
+                width: 140px;
+                height: 80px;
+                margin-left: 85px;
+                margin-bottom: 70px;
+            }
+            
+            .minimal-img-2 {
+                width: 80px;
+                height: 80px;
+                margin-left: 110px;
+                margin-bottom: 70px;
+            }
+            
+            .minimal-img-3 {
+                width: 120px;
+                height: 80px;
+                margin-left: 85px;
+                margin-bottom: 90px;
+            }
+            
+            #card-1:hover {
+                background: #f44336;
+                transition: 0.3s;
+                color: #E0E0E0;
+                cursor: pointer;
+            }
+            
+            #card-2:hover {
+                background: #43A047;
+                transition: 0.3s;
+                color: #E0E0E0;
+                cursor: pointer;
+            }
+            
+            #card-3:hover {
+                background: #3949AB;
+                transition: 0.3s;
+                color: #E0E0E0;
+                cursor: pointer;
+            }
+            
+            .card-text {
+                font-family: Raleway;
+                font-size: +30px;
+            }
+            
+            @keyframes fade {
+                from {opacity: 1;}
+                to {opacity: 0;}
+            }
+            
+            .card-seperator {
+                border-top: 1px solid #212121;
+                border-bottom: 1px solid #212121;
+                padding-top: 10px;
+                padding-left: 20px;
+                font-size: +25px;
+                padding-bottom: 2px;
+            }
+            
+            .card-footer-info {
+                margin-top: 350px;
+                font-size: +24px;
+                padding-left: 40px;
+            }
+            
+            #footer {
+                background: #212121;
+                height: 50px;
+                color: aliceblue;
+                padding-top: 10px;
+                font-size: +18px;
+            }
+        </style>
     </head>
     
     <body>
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
+            <div id="navbar" class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">#SomeName</a>
+                    <a class="navbar-brand" href="#">CMS</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -17,5 +201,103 @@
                 </ul>
             </div>
         </nav>
+        
+        <div id="slideshow">
+            <div class="col-sm-2" id="prev" onclick="prevSlide()">
+                <img src="images/next.png">
+            </div>
+            
+            <div class="col-sm-8">
+                <div class="slides">
+                    <img src="images/transport.jpg">
+                    <div class="text"><b></b></div>
+                </div>
+
+                <div class="slides">
+                    <img src="images/maintenance.jpg">
+                    <div class="text"><b></b></div>
+                </div>
+
+                <div class="slides">
+                    <img src="images/pension.jpeg">
+                    <div class="text"><b></b></div>
+                </div>
+            </div>
+            
+            <div class="col-sm-2" id="next" onclick="nextSlide()">
+                <img src="images/next.png">
+            </div>
+        </div>
+        
+        <div class="card-seperator">
+            <p>Register a complaint</p>
+        </div>
+        
+        <div id="comp-cards">
+            <div class="col-sm-3" id="card-1">
+                <div class="card">
+                    <img src="images/transport-minimal.png" class="minimal-img-1">
+                    <b><center><p class="card-text">Transportation Complaints</p></center></b>
+                </div>
+            </div>
+
+            <div class="col-sm-3" id="card-2">
+                <div class="card">
+                    <img src="images/maintenance-minimal.png" class="minimal-img-2">
+                    <b><center><p class="card-text">Maintenance Complaints</p></center></b>
+                </div>
+            </div>
+            
+            <div class="col-sm-3" id="card-3">
+                <div class="card">
+                    <img src="images/pension-minimal.png" class="minimal-img-3">
+                    <b><center><p class="card-text">Pension Complaints</p></center></b>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        <div class="card-footer-info">
+            <p>Given above are the different types of complaints that can be registered at our forums. Click on any of the cards to register a complaint for the matter specified in the card.</p>
+        </div>
+        
+        <div id="footer" class="container-fluid">
+            <center><p>As a part of Ingenious Hackathon</p></center>
+        </div>
     </body>
+    
+    <script>
+        var slideIndex = 0;
+        showSlide(0);
+        
+        function showSlide(index){
+            var slides = document.getElementsByClassName("slides");
+            for (var i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            
+            slides[index].style.display = "block";
+        }
+        
+        function nextSlide(){
+            var slides = document.getElementsByClassName("slides");
+            
+            slideIndex++;
+            slideIndex = slideIndex % slides.length;
+            
+            showSlide(slideIndex);
+        }
+        
+        function prevSlide(){
+            var slides = document.getElementsByClassName("slides");
+            
+            slideIndex--;
+            if(slideIndex < 0){
+                slideIndex = slideIndex + slides.length;
+            }
+            
+            showSlide(slideIndex);
+        }
+    </script>
 </html>
