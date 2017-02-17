@@ -1,0 +1,72 @@
+#background_img {
+    background: url('../images/hero-image-2.jpg');
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+#login_div {
+    background: #ffffff;
+    width: 34%;
+    height: 68%;
+    margin-left: 11%;
+    margin-top: 4%;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #212121;
+    transition: 0.3s;
+}
+
+#register_div {
+    background: #ffffff;
+    width: 34%;
+    height: 68%;
+    margin-left: 9%;
+    margin-top: 4%;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #212121;
+    transition: 0.3s;
+}
+
+#login_div:hover {
+    background: #f44336;
+    transition: 0.3s;
+    box-shadow: 10px 10px 10px #212121;
+    cursor: pointer;
+}
+
+#register_div:hover {
+    background: #4CAF50;
+    transition: 0.3s;
+    box-shadow: 10px 10px 10px #212121;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(bootstrap/fonts/Raleway.ttf);
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+p {
+    font-size: +24px;
+    font-family: Raleway;
+}
+
+#div_title {
+    font-size: +32px;
+    margin-bottom: 20px;
+}
+
+#page_title {
+    margin-top: 10px;
+    font-size: +38px;
+    margin-bottom: 20px;
+}
