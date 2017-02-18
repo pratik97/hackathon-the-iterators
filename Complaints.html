@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Complaints</title>
+        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <style>
+            #navbar {
+                background: #4CAF50;
+            }
+            
+            .active {
+                background: #2E7D32;
+            }
+            
+            .navbar-default .navbar-nav>li>a {
+                color: #ffffff;
+            }
+            
+            .navbar>.container-fluid .navbar-brand {
+                color: #ffffff;
+            }
+            
+            ul a, div a {
+                color: #ffffff;
+                font-family: Raleway;
+                font-size: +16px;
+            }
+            
+            @font-face {
+                font-family: "Raleway";
+                src: url(bootstrap/fonts/Raleway.ttf);
+            }
+
+            .user {
+                background: #CFD8DC;
+                font-family: Raleway;
+                font-size: +25px;
+                padding-top: 5px;
+            }
+            
+            .complaint {
+                margin-top: 20px;
+                background: #e57373;
+                margin-left: 50px;
+                padding-left: 30px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-right: 400px;
+                font-size: +16px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>    
+    
+    <body>
+        <nav class="navbar navbar-default">
+            <div id="navbar" class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">CMS</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="Dashboard.html">Home</a></li>
+                    <li class="active"><a href="#">Complaints</a></li>
+                    <li><a href="Reminder.html">View Status</a></li>
+                    <li><a href="">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="user container-fluid">
+            <b><p>AADHAARNO. | NAME SURNAME</p></b>
+        </div>
+        <div class="complaint">
+            <p><b>Complaint Title</b></p>
+            <p>Desc</p>
+            <p>Date</p>
+        </div>
+    </body>
+</html>
