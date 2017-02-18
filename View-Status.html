@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>View Status</title>
+        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <style>
+            #navbar {
+                background: #4CAF50;
+            }
+            
+            .active {
+                background: #2E7D32;
+            }
+            
+            .navbar-default .navbar-nav>li>a {
+                color: #ffffff;
+            }
+            
+            .navbar>.container-fluid .navbar-brand {
+                color: #ffffff;
+            }
+            
+            ul a, div a {
+                color: #ffffff;
+                font-family: Raleway;
+                font-size: +16px;
+            }
+            
+            @font-face {
+                font-family: "Raleway";
+                src: url(bootstrap/fonts/Raleway.ttf);
+            }
+            
+            .user {
+                background: #CFD8DC;
+                font-family: Raleway;
+                font-size: +25px;
+                padding-top: 5px;
+            }
+            
+            .asker {
+                background: #B2EBF2;
+                margin-top: 10px;
+                padding-left: 100px;
+                padding-bottom: 15px;
+                padding-top: 25px;
+            }
+            
+            #compNo {
+                width: 200px;
+                padding-left: 15px;
+                height: 40px;
+                font-size: +19px;
+                border: none;
+                border-radius: 5px;
+            }
+            
+            #submitBtn {
+                margin-top: 4px;
+                width: 150px;
+                height: 40px;
+                font-size: +19px;
+                border-radius: 10px;
+                border: none;
+                background: #004D40;
+                color: aliceblue;
+                transition: 0.3s;
+            }
+            
+            #submitBtn:hover {
+                color: #004D40;
+                background: aliceblue;
+                transition: 0.3s;
+            }
+         </style>
+    </head>    
+    
+    <body>
+        <nav class="navbar navbar-default">
+            <div id="navbar" class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">CMS</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="Dashboard.html">Home</a></li>
+                    <li><a href="Complaints.html">Complaints</a></li>
+                    <li class="active"><a href="#">View Status</a></li>
+                    <li><a href="Profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="user container-fluid">
+            <b><p>AADHAARNO. | NAME SURNAME</p></b>
+        </div>
+        
+        <div class="asker">
+            <form action="" method="post">
+                <center>
+                    <input type="text" placeholder="Complaint No." name="compNo" maxlength="8" id="compNo"><br>
+                    <input type="submit" id="submitBtn" value="Get Status">
+                </center>
+            </form>
+        </div>
+    </body>
+</html>
