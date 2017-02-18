@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Complaint Management System</title>
+        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <style>
+            #navbar {
+                background: #4CAF50;
+            }
+            
+            .active {
+                background: #2E7D32;
+            }
+            
+            .navbar-default .navbar-nav>li>a {
+                color: #ffffff;
+            }
+            
+            .navbar>.container-fluid .navbar-brand {
+                color: #ffffff;
+            }
+            
+            ul a, div a {
+                color: #ffffff;
+                font-family: Raleway;
+                font-size: +16px;
+            }
+            
+            @font-face {
+                font-family: "Raleway";
+                src: url(bootstrap/fonts/Raleway.ttf);
+            }
+            
+            #profilePic {
+                background: #EFEBE9;
+                display: inline-block;
+            }
+            
+            #profilePic img {
+                width: 300px;
+                padding-left: 5px;
+                padding-top: 30px;
+                margin-bottom: 20px;
+            }
+            
+            #profileDesc {
+                display: inline-block;
+                padding-left: 50px;
+                padding-top: 30px;
+            }
+            
+            #title {
+                font-family: Raleway;
+                font-size: +20px;
+                padding-left: 10px;
+            }
+            
+            #details {
+                padding-top: 30px;
+                height: 100px;
+                padding-left: 10px;
+                background: #FBE9E7;
+                font-family: Raleway;
+                font-size: +18px;
+                border-radius: 10px;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-default">
+            <div id="navbar" class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">CMS</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="Complaints.html">Complaints</a></li>
+                    <li><a href="View-Status.html">View Status</a></li>
+                    <li class="active"><a href="#">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div id="profilePic" class="col-sm-3">
+                <img src="images/profile.png">
+            </div>
+
+            <div id="profileDesc" class="col-sm-9">
+                <p id="title"><b>AADHAAR NO. | NAME SURNAME</b></p>
+                <p id="details">STREET | CITY | STATE | ZIPCODE</p>
+            </div>
+        </div>
+    </body>
+</html>
